@@ -1,10 +1,15 @@
-__pycache__/
-*.pyc
+# uv (nicht im release)
 .venv/
-*.qgz
-*.zip
-.pytest_cache/
-*.log
-.ruff_cache/
+.python-version
+uv.lock
+pyproject.toml
 
-plugin/libs/*
+# Python
+__pycache__/
+*.py[cod]
+
+# IDE
+.vscode/
+.idea/
+
+plugin/libs/
