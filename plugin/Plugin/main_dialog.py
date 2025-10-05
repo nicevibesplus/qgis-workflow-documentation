@@ -30,7 +30,7 @@ class MainDialog(QDialog):
 
     def __init__(self, parent=None):
         """Initialize the Main Dialog.
-        
+
         :param parent: Parent widget
         :type parent: QWidget
         """
@@ -122,32 +122,13 @@ class MainDialog(QDialog):
 
     def _on_tab_changed(self, index):
         """Handle tab change events.
-        
+
         :param index: Index of the newly selected tab
         :type index: int
         """
-        # Handle any tab-specific initialization or updates
         if index == 1:  # Graph tab
             # Focus on graph view when switching to graph tab
             self.graph_tab.graph_view.setFocus()
-
-    def closeEvent(self, event):  # noqa: N802
-        """Handle dialog close event.
-        
-        :param event: Close event
-        :type event: QCloseEvent
-        """
-        # You can add confirmation dialogs here if needed
-        super().closeEvent(event)
-
-    def resizeEvent(self, event):  # noqa: N802
-        """Handle dialog resize event.
-        
-        :param event: Resize event
-        :type event: QResizeEvent
-        """
-        super().resizeEvent(event)
-        # Any resize-specific handling can be added here
 
     # ============================================================================
     # PUBLIC INTERFACE
@@ -155,7 +136,7 @@ class MainDialog(QDialog):
 
     def get_graph_data(self):
         """Get current graph data for export or other purposes.
-        
+
         :return: Graph data
         :rtype: dict
         """
@@ -167,7 +148,7 @@ class MainDialog(QDialog):
 
     def load_graph_data(self, data):
         """Load graph data - useful for import functionality.
-        
+
         :param data: Graph data to load
         :type data: dict
         """

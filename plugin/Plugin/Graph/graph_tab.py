@@ -40,7 +40,7 @@ class GraphTab(QWidget):
 
     def __init__(self, parent=None):
         """Initialize the Graph tab widget.
-        
+
         :param parent: Parent widget
         :type parent: QWidget
         """
@@ -267,7 +267,7 @@ class GraphTab(QWidget):
 
     def populate_process_list(self, process_list, show_all=False):
         """Populate the process list with steps, filtered by date if needed.
-        
+
         :param process_list: List widget to populate
         :type process_list: QListWidget
         :param show_all: Whether to show all steps or only recent ones
@@ -325,7 +325,7 @@ class GraphTab(QWidget):
 
     def toggle_connection_mode(self, enabled):
         """Toggle connection mode.
-        
+
         :param enabled: Whether connection mode should be enabled
         :type enabled: bool
         """
@@ -378,7 +378,7 @@ class GraphTab(QWidget):
 
     def on_layer_removed(self, layer_obj):
         """Handle layer removal from the graph.
-        
+
         :param layer_obj: Layer object that was removed
         :type layer_obj: Layer
         """
@@ -392,7 +392,7 @@ class GraphTab(QWidget):
 
     def on_process_removed(self, process_obj):
         """Handle process removal from the graph.
-        
+
         :param process_obj: Process object that was removed
         :type process_obj: Process
         """
@@ -410,7 +410,7 @@ class GraphTab(QWidget):
 
     def get_documented_layers(self):
         """Get all documented layers.
-        
+
         :return: Dictionary of documented layers
         :rtype: dict
         """
@@ -418,7 +418,7 @@ class GraphTab(QWidget):
 
     def get_documented_steps(self):
         """Get all documented processing steps.
-        
+
         :return: Dictionary of documented processing steps
         :rtype: dict
         """
@@ -426,7 +426,7 @@ class GraphTab(QWidget):
 
     def get_stats(self):
         """Get statistics about the current graph.
-        
+
         :return: Dictionary containing graph statistics
         :rtype: dict
         """

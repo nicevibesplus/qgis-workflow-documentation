@@ -23,7 +23,7 @@ class InstructionTab(QWidget):
 
     def __init__(self, parent=None):
         """Initialize the Instruction tab widget.
-        
+
         :param parent: Parent widget
         :type parent: QWidget
         """

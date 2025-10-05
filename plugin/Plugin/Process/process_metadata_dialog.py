@@ -32,7 +32,7 @@ class ProcessMetadataDialog(QDialog):
 
     def __init__(self, parent=None, process=None):
         """Initialize the Process Metadata Dialog.
-        
+
         :param parent: Parent widget
         :type parent: QWidget
         :param process: Process object to document
@@ -312,7 +312,7 @@ class ProcessMetadataDialog(QDialog):
 
     def _validate_name_field(self):
         """Validate name field.
-        
+
         :return: True if valid, False otherwise
         :rtype: bool
         """
@@ -329,7 +329,7 @@ class ProcessMetadataDialog(QDialog):
 
     def _validate_description_field(self):
         """Validate description field.
-        
+
         :return: True if valid, False otherwise
         :rtype: bool
         """
@@ -346,7 +346,7 @@ class ProcessMetadataDialog(QDialog):
 
     def _apply_validation_styles(self, widget, state):
         """Apply validation styles to a widget.
-        
+
         :param widget: Widget to apply styles to
         :type widget: QWidget
         :param state: Validation state ('valid', 'invalid', or 'neutral')
@@ -394,7 +394,7 @@ class ProcessMetadataDialog(QDialog):
 
     def get_metadata(self):
         """Get the process metadata as a dictionary.
-        
+
         :return: Dictionary containing process metadata
         :rtype: dict
         """

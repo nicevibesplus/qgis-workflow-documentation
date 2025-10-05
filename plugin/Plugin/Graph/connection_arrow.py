@@ -22,7 +22,7 @@ class ConnectionArrow(QGraphicsLineItem):
 
     def __init__(self, start_node, end_node):
         """Initialize a ConnectionArrow between two nodes.
-        
+
         :param start_node: Starting node for the connection
         :type start_node: LayerNode or ProcessNode
         :param end_node: Ending node for the connection
@@ -102,7 +102,7 @@ class ConnectionArrow(QGraphicsLineItem):
 
     def _get_rect_edge_point(self, center, rect, dx, dy):
         """Get edge point on rectangle.
-        
+
         :param center: Center point of the rectangle
         :type center: QPointF
         :param rect: Rectangle bounds
@@ -133,7 +133,7 @@ class ConnectionArrow(QGraphicsLineItem):
 
     def _get_ellipse_edge_point(self, center, rect, dx, dy):
         """Get edge point on ellipse.
-        
+
         :param center: Center point of the ellipse
         :type center: QPointF
         :param rect: Ellipse bounds
@@ -162,7 +162,7 @@ class ConnectionArrow(QGraphicsLineItem):
 
     def _create_arrowhead(self, tip_point, dx, dy):
         """Create arrowhead at tip point.
-        
+
         :param tip_point: Point where arrowhead should be placed
         :type tip_point: QPointF
         :param dx: X component of direction vector
@@ -205,7 +205,7 @@ class ConnectionArrow(QGraphicsLineItem):
 
     def mousePressEvent(self, event):  # noqa: N802
         """Delete arrow on click.
-        
+
         :param event: Mouse press event
         :type event: QMouseEvent
         """

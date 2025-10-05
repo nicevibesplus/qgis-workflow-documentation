@@ -24,7 +24,7 @@ class LayerNode(QGraphicsRectItem):
 
     def __init__(self, layer_obj):
         """Initialize a LayerNode from a Layer object.
-        
+
         :param layer_obj: Layer object to represent
         :type layer_obj: Layer
         """
@@ -157,7 +157,7 @@ class LayerNode(QGraphicsRectItem):
 
     def itemChange(self, change, value):  # noqa: N802
         """Update connected arrows when moved.
-        
+
         :param change: Type of change
         :type change: QGraphicsItem.GraphicsItemChange
         :param value: New value
@@ -172,7 +172,7 @@ class LayerNode(QGraphicsRectItem):
 
     def contextMenuEvent(self, event):  # noqa: N802
         """Right-click context menu.
-        
+
         :param event: Context menu event
         :type event: QGraphicsSceneContextMenuEvent
         """
@@ -205,7 +205,7 @@ class LayerNode(QGraphicsRectItem):
 
     def _make_dialog_readonly(self, dialog):
         """Make all input fields in the dialog read-only.
-        
+
         :param dialog: Dialog to make read-only
         :type dialog: LayerMetadataDialog
         """
@@ -235,7 +235,7 @@ class LayerNode(QGraphicsRectItem):
 
     def can_accept_input_connection(self):
         """Check if this layer can accept another input connection.
-        
+
         :return: True if layer can accept input, False otherwise
         :rtype: bool
         """
@@ -243,7 +243,7 @@ class LayerNode(QGraphicsRectItem):
 
     def add_input_arrow(self, arrow):
         """Add an input arrow to this layer.
-        
+
         :param arrow: Arrow to add
         :type arrow: ConnectionArrow
         :return: True if arrow was added, False otherwise
@@ -256,7 +256,7 @@ class LayerNode(QGraphicsRectItem):
 
     def remove_input_arrow(self, arrow):
         """Remove an input arrow from this layer.
-        
+
         :param arrow: Arrow to remove
         :type arrow: ConnectionArrow
         """

@@ -15,7 +15,7 @@ class Instrument:
 
     def __init__(self, algorithm):
         """Initialize an Instrument from an algorithm ID.
-        
+
         :param algorithm: QGIS algorithm identifier
         :type algorithm: str
         """
@@ -31,7 +31,7 @@ class Instrument:
 
     def add_to_rocrate(self, crate):
         """Add this instrument to a ROCrate.
-        
+
         :param crate: The ROCrate object to add this instrument to
         :type crate: ROCrate
         :return: The updated ROCrate object

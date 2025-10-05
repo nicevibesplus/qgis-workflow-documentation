@@ -47,7 +47,7 @@ class GraphView(QGraphicsView):
 
     def dragEnterEvent(self, event):  # noqa: N802
         """Accept drag events.
-        
+
         :param event: Drag enter event
         :type event: QDragEnterEvent
         """
@@ -56,7 +56,7 @@ class GraphView(QGraphicsView):
 
     def dragMoveEvent(self, event):  # noqa: N802
         """Handle drag move.
-        
+
         :param event: Drag move event
         :type event: QDragMoveEvent
         """
@@ -64,7 +64,7 @@ class GraphView(QGraphicsView):
 
     def dropEvent(self, event):  # noqa: N802
         """Handle drop events - create new nodes.
-        
+
         :param event: Drop event
         :type event: QDropEvent
         """
@@ -95,7 +95,7 @@ class GraphView(QGraphicsView):
 
     def mousePressEvent(self, event):  # noqa: N802
         """Handle mouse press for connections.
-        
+
         :param event: Mouse press event
         :type event: QMouseEvent
         """
@@ -145,7 +145,7 @@ class GraphView(QGraphicsView):
 
     def is_valid_connection(self, start_node, end_node):
         """Check if connection between two nodes is valid.
-        
+
         :param start_node: Starting node for the connection
         :type start_node: LayerNode or ProcessNode
         :param end_node: Ending node for the connection
@@ -166,7 +166,7 @@ class GraphView(QGraphicsView):
 
     def _get_original_brush(self, node):
         """Get original brush color for node type.
-        
+
         :param node: The node to get the brush for
         :type node: LayerNode or ProcessNode
         :return: Brush with the original color for the node type
@@ -187,7 +187,7 @@ class GraphView(QGraphicsView):
 
     def toggle_connection_mode(self, enabled):
         """Toggle connection creation mode.
-        
+
         :param enabled: Whether connection mode should be enabled
         :type enabled: bool
         """

@@ -46,7 +46,7 @@ class ExportTab(QWidget):
 
     def __init__(self, parent=None):
         """Initialize the Export tab widget.
-        
+
         :param parent: Parent widget
         :type parent: QWidget
         """
@@ -304,7 +304,7 @@ class ExportTab(QWidget):
 
     def validate_orcid(self, orcid):
         """Validate ORCID format (if provided).
-        
+
         :param orcid: ORCID identifier to validate
         :type orcid: str
         :return: True if valid or empty, False otherwise
@@ -335,7 +335,7 @@ class ExportTab(QWidget):
 
     def get_export_metadata(self):
         """Get all export metadata from form fields.
-        
+
         :return: Dictionary containing all export metadata
         :rtype: dict
         """
@@ -352,7 +352,7 @@ class ExportTab(QWidget):
 
     def get_license_url(self, license_id):
         """Get the URL for a given license identifier.
-        
+
         :param license_id: License identifier
         :type license_id: str
         :return: URL for the license, or None if not found
@@ -384,7 +384,7 @@ class ExportTab(QWidget):
 
     def set_default_values(self, title=None, description=None, license_id=None):
         """Set default values for form fields.
-        
+
         :param title: Default title
         :type title: str or None
         :param description: Default description
@@ -405,7 +405,7 @@ class ExportTab(QWidget):
 
     def _fix_rocrate_context(self, export_file_path):
         """Fix RO-Crate context issues in the exported zip file.
-        
+
         :param export_file_path: Path to the exported RO-Crate zip file
         :type export_file_path: str
         """

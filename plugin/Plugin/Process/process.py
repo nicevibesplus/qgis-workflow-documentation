@@ -18,7 +18,7 @@ class Process:
 
     def __init__(self, source):
         """Initialize a Process from a QGIS history entry.
-        
+
         :param source: QGIS history entry containing process information
         :type source: QgsHistoryEntry
         """
@@ -44,7 +44,7 @@ class Process:
 
     def set_name_description(self, name, description):
         """Set the name and description for this process.
-        
+
         :param name: Process name
         :type name: str
         :param description: Process description
@@ -55,7 +55,7 @@ class Process:
 
     def set_input(self, inputs):
         """Set the input objects for this process.
-        
+
         :param inputs: List of input layer IDs or single input layer ID
         :type inputs: list or str
         """
@@ -68,7 +68,7 @@ class Process:
 
     def set_result(self, result):
         """Set the result object for this process.
-        
+
         :param result: Result layer ID
         :type result: str
         """
@@ -80,7 +80,7 @@ class Process:
 
     def add_to_rocrate(self, crate):
         """Add this process to a ROCrate.
-        
+
         :param crate: The ROCrate object to add this process to
         :type crate: ROCrate
         :return: The updated ROCrate object

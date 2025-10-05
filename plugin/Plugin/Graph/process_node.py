@@ -25,7 +25,7 @@ class ProcessNode(QGraphicsEllipseItem):
 
     def __init__(self, process_obj):
         """Initialize a ProcessNode from a Process object.
-        
+
         :param process_obj: Process object to represent
         :type process_obj: Process
         """
@@ -121,7 +121,7 @@ class ProcessNode(QGraphicsEllipseItem):
 
     def itemChange(self, change, value):  # noqa: N802
         """Update connected arrows when moved.
-        
+
         :param change: Type of change
         :type change: QGraphicsItem.GraphicsItemChange
         :param value: New value
@@ -136,7 +136,7 @@ class ProcessNode(QGraphicsEllipseItem):
 
     def contextMenuEvent(self, event):  # noqa: N802
         """Right-click context menu.
-        
+
         :param event: Context menu event
         :type event: QGraphicsSceneContextMenuEvent
         """
@@ -174,7 +174,7 @@ class ProcessNode(QGraphicsEllipseItem):
 
     def _make_dialog_readonly(self, dialog):
         """Make all input fields in the dialog read-only.
-        
+
         :param dialog: Dialog to make read-only
         :type dialog: ProcessMetadataDialog
         """
@@ -196,7 +196,7 @@ class ProcessNode(QGraphicsEllipseItem):
 
     def add_input_arrow(self, arrow):
         """Add an input arrow and update process object.
-        
+
         :param arrow: Arrow to add
         :type arrow: ConnectionArrow
         """
@@ -205,7 +205,7 @@ class ProcessNode(QGraphicsEllipseItem):
 
     def remove_input_arrow(self, arrow):
         """Remove an input arrow and update process object.
-        
+
         :param arrow: Arrow to remove
         :type arrow: ConnectionArrow
         """
@@ -215,7 +215,7 @@ class ProcessNode(QGraphicsEllipseItem):
 
     def add_output_arrow(self, arrow):
         """Add an output arrow and update process object.
-        
+
         :param arrow: Arrow to add
         :type arrow: ConnectionArrow
         """
@@ -224,7 +224,7 @@ class ProcessNode(QGraphicsEllipseItem):
 
     def remove_output_arrow(self, arrow):
         """Remove an output arrow and update process object.
-        
+
         :param arrow: Arrow to remove
         :type arrow: ConnectionArrow
         """
