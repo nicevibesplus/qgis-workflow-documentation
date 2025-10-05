@@ -1,0 +1,56 @@
+name: Create Plugin Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        
+      - name: Install uv
+        uses: astral-sh/setup-uv@v2
+        
+      - name: Set up Python
+        run: uv python install 3.11
+      
+      - name: Verify libs directory exists
+        run: |
+          if [ ! -d "libs" ]; then
+            echo "Error: libs directory not found"
+            exit 1
+          fi
+          echo "libs directory contents:"
+          ls -la libs/
+      
+      - name: Create plugin ZIP
+        run: |
+          PLUGIN_NAME="automated_workflow_documentation"
+          TAG_NAME="${{ github.ref_name }}"
+          cd ..
+          
+          zip -r ${PLUGIN_NAME}-${TAG_NAME}.zip ${PLUGIN_NAME}/ \
+            -x "*.git*" \
+            -x "*__pycache__*" \
+            -x "*.pyc" \
+            -x "*/.venv/*" \
+            -x "*/.vscode/*" \
+            -x "*/.idea/*" \
+            -x "*/pyproject.toml" \
+            -x "*/uv.lock" \
+            -x "*.DS_Store"
+          
+          # Move ZIP back to workspace
+          mv ${PLUGIN_NAME}-${TAG_NAME}.zip ${PLUGIN_NAME}/
+      
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: automated_workflow_documentation-${{ github.ref_name }}.zip
+          generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

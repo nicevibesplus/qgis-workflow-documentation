@@ -12,5 +12,4 @@ __pycache__/
 .vscode/
 .idea/
 
-# OS
-.DS_Store
+plugin/libs/
