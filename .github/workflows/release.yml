@@ -21,7 +21,7 @@ jobs:
       - name: Prepare Plugin directory
         run: |
           mkdir -p release/automated_workflow_documentation
-          cp -r Plugin/* release/automated_workflow_documentation/
+          cp -r plugin/* release/automated_workflow_documentation/
       
       - name: Install dependencies to libs
         run: |

@@ -20,4 +20,4 @@ git push origin --tags
 echo ""
 echo "Tag $VERSION pushed!"
 echo "GitHub Actions is now building the release..."
-echo "Check: https://github.com/YOUR_USERNAME/YOUR_REPO/actions"
+echo "Check: https://github.com/nicevibesplus/qgis-workflow-documentation/actions"
