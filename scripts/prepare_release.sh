@@ -25,15 +25,26 @@ fi
 # 3. Switch zu main und merge
 echo "Switching to main..."
 git checkout main
-git merge dev --no-edit
 
-# 4. Install production libs
+# Merge mit Strategie: Bei .gitignore main Version behalten
+git merge dev --no-edit -X ours || {
+    # Falls Konflikt: .gitignore von main behalten
+    git checkout --ours .gitignore
+    git add .gitignore
+    git commit --no-edit
+}
+
+# 4. Entferne libs/ falls aus dev gekommen
+if [ -d "libs" ]; then
+    git rm -rf libs/ 2>/dev/null || rm -rf libs/
+fi
+
+# 5. Install production libs
 echo "Installing production dependencies to libs/..."
-rm -rf libs/
 mkdir -p libs/
 uv pip install --python-version 3.9 --target libs/ rocrate
 
-# 5. Cleanup libs
+# 6. Cleanup libs
 echo "Cleaning up libs/..."
 find libs/ -type d -name "__pycache__" -exec rm -rf {} + 2>/dev/null || true
 find libs/ -type f -name "*.pyc" -delete
@@ -41,12 +52,12 @@ find libs/ -type d -name "*.dist-info" -exec rm -rf {} + 2>/dev/null || true
 find libs/ -type d -name "*.egg-info" -exec rm -rf {} + 2>/dev/null || true
 find libs/ -type d -name "tests" -exec rm -rf {} + 2>/dev/null || true
 
-# 6. Commit libs
+# 7. Commit libs
 git add libs/
 git add .gitignore
 git commit -m "Release $VERSION: Update production dependencies" || true
 
-# 7. Create tag
+# 8. Create tag
 echo "Creating tag $VERSION..."
 git tag -a $VERSION -m "Release $VERSION"
 
@@ -61,3 +72,4 @@ echo ""
 echo "To abort:"
 echo "  git tag -d $VERSION"
 echo "  git reset --hard HEAD~1"
+echo "  git checkout dev"
