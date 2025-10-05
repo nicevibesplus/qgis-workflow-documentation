@@ -6,3 +6,5 @@ __pycache__/
 .pytest_cache/
 *.log
 .ruff_cache/
+
+plugin/libs/
