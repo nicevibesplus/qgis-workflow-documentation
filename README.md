@@ -4,8 +4,7 @@ A QGIS plugin for documenting geospatial workflows and exporting them as RO-Crat
 
 ## Installation
 1. Download the latest plugin version from [Releases](https://github.com/nicevibesplus/qgis-workflow-documentation/releases)
-2. Install in QGIS: \
-Plugins -> Manage and Install Plugins -> Install from ZIP
+2. Install in QGIS: Plugins -> Manage and Install Plugins -> Install from ZIP
 
 ## Development
 ### Prerequisites
@@ -29,3 +28,11 @@ source .venv/bin/activate
 # Windows
 .venv\Scripts\activate
 ```
+
+### Release
+
+```
+# Linux/Git Bash
+scipts\create_release.sh v0.0.1
+```
+This packages only the prod necessary files and also the rocrate library dependencies to the ZIP.
