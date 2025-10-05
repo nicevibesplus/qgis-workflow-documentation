@@ -1,0 +1,16 @@
+# uv (nicht im release)
+.venv/
+.python-version
+uv.lock
+pyproject.toml
+
+# Python
+__pycache__/
+*.py[cod]
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
