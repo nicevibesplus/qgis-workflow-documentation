@@ -1,8 +1,7 @@
-# uv (nicht im release)
+# uv
 .venv/
-.python-version
 uv.lock
-pyproject.toml
+.ruff_cache/
 
 # Python
 __pycache__/

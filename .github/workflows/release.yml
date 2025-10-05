@@ -1,4 +1,4 @@
-name: Create Plugin Release
+name: Create Release
 
 on:
   push:
@@ -18,39 +18,26 @@ jobs:
       - name: Set up Python
         run: uv python install 3.11
       
-      - name: Verify libs directory exists
+      - name: Prepare Plugin directory
         run: |
-          if [ ! -d "libs" ]; then
-            echo "Error: libs directory not found"
-            exit 1
-          fi
-          echo "libs directory contents:"
-          ls -la libs/
+          mkdir -p release/automated_workflow_documentation
+          cp -r Plugin/* release/automated_workflow_documentation/
       
-      - name: Create plugin ZIP
+      - name: Install dependencies to libs
         run: |
-          PLUGIN_NAME="automated_workflow_documentation"
-          TAG_NAME="${{ github.ref_name }}"
-          cd ..
-          
-          zip -r ${PLUGIN_NAME}-${TAG_NAME}.zip ${PLUGIN_NAME}/ \
-            -x "*.git*" \
-            -x "*__pycache__*" \
-            -x "*.pyc" \
-            -x "*/.venv/*" \
-            -x "*/.vscode/*" \
-            -x "*/.idea/*" \
-            -x "*/pyproject.toml" \
-            -x "*/uv.lock" \
-            -x "*.DS_Store"
-          
-          # Move ZIP back to workspace
-          mv ${PLUGIN_NAME}-${TAG_NAME}.zip ${PLUGIN_NAME}/
+          mkdir -p release/automated_workflow_documentation/libs
+          uv pip install --target release/automated_workflow_documentation/libs rocrate
+      
+      - name: Create ZIP
+        run: |
+          cd release
+          zip -r automated_workflow_documentation-${{ github.ref_name }}.zip \
+            automated_workflow_documentation/
       
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v1
         with:
-          files: automated_workflow_documentation-${{ github.ref_name }}.zip
+          files: release/automated_workflow_documentation-${{ github.ref_name }}.zip
           generate_release_notes: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
