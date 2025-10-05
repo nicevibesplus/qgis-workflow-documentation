@@ -7,4 +7,4 @@ __pycache__/
 *.log
 .ruff_cache/
 
-plugin/libs/
+plugin/libs/*
