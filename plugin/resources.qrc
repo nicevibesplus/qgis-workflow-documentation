@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/plugins/automated_workflow_documentation" >
+        <file>icon.png</file>
+    </qresource>
+</RCC>

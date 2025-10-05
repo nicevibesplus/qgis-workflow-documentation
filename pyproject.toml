@@ -1,0 +1,26 @@
+[project]
+name = "qgis-workflow-documentation"
+version = "0.1.0"
+description = "QGIS plugin for automated workflow documentation and export to RO-Crate"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.12"
+dependencies = ["rocrate>=0.14.0"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+exclude = ["plugin/libs/*"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W"]
+ignore = []
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+[dependency-groups]
+dev = [
+    "ruff>=0.13.3",
+]

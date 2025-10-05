@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.venv/
+*.qgz
+*.zip
+.pytest_cache/
+*.log
+.ruff_cache/
