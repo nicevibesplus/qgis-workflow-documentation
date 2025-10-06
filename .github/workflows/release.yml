@@ -19,28 +19,28 @@ jobs:
         uses: astral-sh/setup-uv@v2
         
       - name: Set up Python
-        run: uv python install 3.11
+        run: uv python install 3.12.9
       
       - name: Prepare Plugin directory
         run: |
-          mkdir -p release/automated_workflow_documentation
-          cp -r plugin/* release/automated_workflow_documentation/
+          mkdir -p release/qgis_workflow_documentation
+          cp -r plugin/* release/qgis_workflow_documentation/
       
       - name: Install dependencies to libs
         run: |
-          mkdir -p release/automated_workflow_documentation/libs
-          uv pip install --target release/automated_workflow_documentation/libs rocrate
-      
+          mkdir -p release/qgis_workflow_documentation/libs
+          uv pip install --target release/qgis_workflow_documentation/libs rocrate
+
       - name: Create ZIP
         run: |
           cd release
-          zip -r automated_workflow_documentation-${{ github.ref_name }}.zip \
-            automated_workflow_documentation/
-      
+          zip -r qgis_workflow_documentation-${{ github.ref_name }}.zip \
+            qgis_workflow_documentation/
+
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v1
         with:
-          files: release/automated_workflow_documentation-${{ github.ref_name }}.zip
+          files: release/qgis_workflow_documentation-${{ github.ref_name }}.zip
           generate_release_notes: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
