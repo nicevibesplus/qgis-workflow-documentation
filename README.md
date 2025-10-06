@@ -1,6 +1,19 @@
-# QGIS Workflow Documentation
+# QGIS Workflow Documentation Plugin
 
-A QGIS plugin for documenting geospatial workflows and exporting them as RO-Crate packages to enhance reproducibility in GIS projects. This plugin is the result of a Bachelor's Thesis by @nicevibesplus. 
+A QGIS plugin for semi-automatic documentation of geospatial workflows with standardized RO-Crate export to enhance reproducibility in map-based research.
+
+## About This Project
+
+This plugin was developed as part of a Bachelor's thesis in the Geoinformatics program at the University of Münster's Institute for Geoinformatics.
+
+**Thesis Details:**
+- **Title:** Enhancing Map Reproducibility: Developing a QGIS Plugin for Automated Documentation of Data Provenance and Workflow
+- **Author:** Andreas Rademaker ([nicevibesplus](https://github.com/nicevibesplus))
+- **Degree:** Bachelor of Science in Geoinformatics
+- **Institution:** University of Münster, Institute for Geoinformatics
+- **Supervisors:** Eftychia Koukouraki, Brian Ochieng Pondi
+- **Date:** October 2025
+
 
 ## Installation
 1. Download the latest plugin version from [Releases](https://github.com/nicevibesplus/qgis-workflow-documentation/releases)
