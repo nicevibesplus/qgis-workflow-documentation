@@ -69,11 +69,6 @@ else
     sed -i "s/^version=.*/version=$VERSION_NUMBER/" "$METADATA_FILE"
 fi
 
-# Show changes
-echo ""
-echo "Changes to be committed:"
-git diff "$METADATA_FILE"
-
 # Confirm changes
 read -p "Proceed with commit and release? (y/N) " -n 1 -r
 echo
