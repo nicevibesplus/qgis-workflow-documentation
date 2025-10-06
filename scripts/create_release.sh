@@ -2,7 +2,7 @@
 set -e
 
 VERSION=$1
-METADATA_FILE="metadata.txt"
+METADATA_FILE="plugin/metadata.txt"
 
 # Show help if no version provided
 if [ -z "$VERSION" ]; then
