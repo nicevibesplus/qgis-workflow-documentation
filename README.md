@@ -27,13 +27,14 @@ This plugin was developed as part of a Bachelor's thesis in the Geoinformatics p
 
 ### Setup Development Environment
 1. Clone the Repository
+First fork the repository to your GitHub account and then clone it locally:
 ```
-git clone https://github.com/nicevibesplus/qgis-workflow-documentation.git 
+git clone https://github.com/<your-username>/qgis-workflow-documentation.git 
 cd qgis-workflow-documentation
 ```
 2. Create Virtual Environment with uv
 ```
-uv sync
+uv python install 3.12
 
 # Linux/Mac/Git Bash
 source .venv/bin/activate
@@ -46,6 +47,11 @@ source .venv/bin/activate
 
 ```
 # Linux/Git Bash
-scipts\create_release.sh v0.0.1
+chmod +x scripts/create_release.sh
+# Might need to commit changes to make it executable
+scripts/create_release.sh v0.0.1
+
+# Windows
+scripts\create_release.sh v0.0.1
 ```
 This packages only the prod necessary files and also the rocrate library dependencies to the ZIP.
