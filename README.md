@@ -55,3 +55,35 @@ scripts/create_release.sh v0.0.1
 scripts\create_release.sh v0.0.1
 ```
 This packages only the prod necessary files and also the rocrate library dependencies to the ZIP.
+
+## Troubleshooting
+
+### ModuleNotFoundError: No module named 'rocrate'
+
+**Issue:** When loading the plugin in QGIS, you encounter the following error:
+```
+ModuleNotFoundError: No module named 'rocrate'
+Traceback (most recent call last):
+  File "...", line 35, in classFactory
+    from .automated_workflow_documentation import AutomatedWorkflowDocumentation
+  ...
+  File "...", line 32, in <module>
+    from rocrate.rocrate import ROCrate
+ModuleNotFoundError: No module named 'rocrate'
+```
+
+**Cause:** The `rocrate` package required by the plugin is not installed in QGIS's bundled Python environment. QGIS uses its own isolated Python interpreter, which is separate from your system Python.
+
+**Solution:** Install the `rocrate` package to QGIS's Python site-packages directory:
+
+1. **macOS/Linux:**
+   ```bash
+   python3 -m pip install --target ~/.local/lib/python3.12/site-packages rocrate
+   ```
+
+2. **Windows:**
+   ```bash
+   python -m pip install --target %APPDATA%\Python\Python312\site-packages rocrate
+   ```
+
+After installation, restart QGIS and the plugin should load without errors.
