@@ -6,7 +6,7 @@
 name=QGIS Workflow Documentation
 qgisMinimumVersion=3.24
 description=This plugin allows the documentation and export of map creation workflow. The export file is a RO-Crate zip archive.
-version=0.0.3
+version=0.0.1
 author=Andreas Rademaker
 email=andreas.rademaker@uni-muenster.de
 
