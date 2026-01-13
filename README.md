@@ -34,7 +34,6 @@ cd qgis-workflow-documentation
 ```
 2. Create Virtual Environment with uv
 ```
-uv python install 3.12
 uv sync
 
 # Linux/Mac/Git Bash
