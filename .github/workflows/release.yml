@@ -23,24 +23,24 @@ jobs:
 
       - name: Prepare Plugin directory
         run: |
-          mkdir -p release/qgis_workflow_documentation
-          cp -r plugin/* release/qgis_workflow_documentation/
+          mkdir -p release/qflowcrate
+          cp -r plugin/* release/qflowcrate/
 
       - name: Install dependencies to libs
         run: |
-          mkdir -p release/qgis_workflow_documentation/libs
-          uv pip install --target release/qgis_workflow_documentation/libs rocrate
+          mkdir -p release/qflowcrate/libs
+          uv pip install --target release/qflowcrate/libs rocrate
 
       - name: Create ZIP
         run: |
           cd release
-          zip -r qgis_workflow_documentation-${{ github.ref_name }}.zip \
-            qgis_workflow_documentation/
+          zip -r qflowcrate-${{ github.ref_name }}.zip \
+            qflowcrate/
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v1
         with:
-          files: release/qgis_workflow_documentation-${{ github.ref_name }}.zip
+          files: release/qflowcrate-${{ github.ref_name }}.zip
           generate_release_notes: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

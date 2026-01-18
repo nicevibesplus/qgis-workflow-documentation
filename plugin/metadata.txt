@@ -3,7 +3,7 @@
 # This file should be included when you package your plugin.# Mandatory items:
 
 [general]
-name=QGIS Workflow Documentation
+name=QFlowCrate
 qgisMinimumVersion=3.24
 description=This plugin allows the documentation and export of map creation workflow. The export file is a RO-Crate zip archive.
 version=0.0.4
@@ -12,8 +12,8 @@ email=andreas.rademaker@uni-muenster.de
 
 about=This plugin is the result of a bachelor thesis. It automatically documents the whole workflow of data processing, the base data and the symbology to enhance map reproducibility.
 
-tracker=https://github.com/nicevibesplus/qgis-workflow-documentation/issues
-repository=https://github.com/nicevibesplus/qgis-workflow-documentation
+tracker=https://github.com/nicevibesplus/qflowcrate/issues
+repository=https://github.com/nicevibesplus/qflowcrate
 # End of mandatory metadata
 
 # Recommended items:
@@ -25,9 +25,9 @@ hasProcessingProvider=no
 # Tags are comma separated with spaces allowed
 tags=export, python, documentation, reproducibility, rocrate
 
-homepage=https://github.com/nicevibesplus/qgis-workflow-documentation
+homepage=https://github.com/nicevibesplus/qflowcrate
 category=Plugins
-icon=icon.png
+icon=icon.svg
 experimental=True
 
 # deprecated flag (applies to the whole plugin, not just a single version)
