@@ -31,7 +31,7 @@ This plugin was developed as part of a Bachelor's thesis in the Geoinformatics p
 1. Clone the Repository
 First fork the repository to your GitHub account and then clone it locally:
 ```
-git clone https://github.com/<your-username>/qgis-workflow-documentation.git 
+git clone https://github.com/nicevibesplus/qgis-workflow-documentation.git  
 cd qgis-workflow-documentation
 ```
 2. Create Virtual Environment with uv
@@ -76,7 +76,7 @@ ModuleNotFoundError: No module named 'rocrate'
 
 **Cause:** The `rocrate` package required by the plugin is not installed in QGIS's bundled Python environment. QGIS uses its own isolated Python interpreter, which is separate from your system Python.
 
-**Solution:** Install the `rocrate` package to QGIS's Python site-packages directory:
+**Solution:** Install the `rocrate` package to QGIS's Python site-packages directory. First, you need to identify which Python version is used by QGIS in your system. You can check this info at Help -> About in the top menu. For example, if the Python version pointed to by QGIS is 3.12.9, you should run the following command in your terminal:
 
 1. **macOS/Linux:**
    ```bash
