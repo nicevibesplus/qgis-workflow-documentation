@@ -18,7 +18,7 @@ This plugin was developed as part of a Bachelor's thesis in the Geoinformatics p
 
 
 ## Installation
-1. Download the latest plugin version from [Releases](https://github.com/nicevibesplus/qgis-workflow-documentation/releases)
+1. Download the latest plugin version from [Releases](https://github.com/nicevibesplus/QFlowCrate/releases)
 2. Install in QGIS: Plugins -> Manage and Install Plugins -> Install from ZIP
 
 ## Development
@@ -31,8 +31,8 @@ This plugin was developed as part of a Bachelor's thesis in the Geoinformatics p
 1. Clone the Repository
 First fork the repository to your GitHub account and then clone it locally:
 ```
-git clone https://github.com/nicevibesplus/qgis-workflow-documentation.git  
-cd qgis-workflow-documentation
+git clone https://github.com/nicevibesplus/QFlowCrate.git  
+cd QFlowCrate
 ```
 2. Create Virtual Environment with uv
 ```
