@@ -1,6 +1,8 @@
-# QGIS Workflow Documentation Plugin
+<img src="/images/icon.svg" align="right" width="100" />
 
+# QFlowCrate
 A QGIS plugin for semi-automatic documentation of geospatial workflows with standardized RO-Crate export to enhance reproducibility in map-based research.
+<br clear="right"/>
 
 ## About This Project
 
